@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-const labelTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: Color(0XFF8D8E90),
-);
+import 'constans.dart';
 
 class IconContent extends StatelessWidget {
   IconContent(this.icon, this.label);
