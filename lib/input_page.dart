@@ -36,8 +36,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     selectedGender == Gender.male
-                        ? activeCardColour
-                        : inactiveCarColour,
+                        ? kActiveCardColour
+                        : kInactiveCarColour,
                     IconContent(
                       FontAwesomeIcons.mars,
                       "MALE",
@@ -52,8 +52,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     selectedGender == Gender.female
-                        ? activeCardColour
-                        : inactiveCarColour,
+                        ? kActiveCardColour
+                        : kInactiveCarColour,
                     IconContent(
                       FontAwesomeIcons.venus,
                       "FEMALE",
@@ -64,7 +64,7 @@ class _InputPageState extends State<InputPage> {
             )),
             Expanded(
               child: ReusableCard(
-                activeCardColour,
+                kActiveCardColour,
                 Row(),
                 onPress: () {},
               ),
@@ -74,14 +74,14 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    activeCardColour,
+                    kActiveCardColour,
                     Column(),
                     onPress: () {},
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    activeCardColour,
+                    kActiveCardColour,
                     Column(),
                     onPress: () {},
                   ),
@@ -89,10 +89,10 @@ class _InputPageState extends State<InputPage> {
               ],
             )),
             Container(
-              color: bottomContainerColour,
+              color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
-              height: bottomContainerHeight,
+              height: kBottomContainerHeight,
             ),
           ],
         ));
