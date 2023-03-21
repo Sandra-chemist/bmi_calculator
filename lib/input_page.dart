@@ -24,28 +24,21 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                      activeCardColour,
-                      Column(
-                        children: [
-                          Icon(
-                            FontAwesomeIcons.mars,
-                            size: 80.0,
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Text(
-                            'MALE',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              color: Color(0XFF8D8E90),
-                            ),
-                          )
-                        ],
-                      )),
+                    activeCardColour,
+                    IconContent(
+                      FontAwesomeIcons.mars,
+                      "MALE",
+                    ),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(activeCardColour, Column()),
+                  child: ReusableCard(
+                    activeCardColour,
+                    IconContent(
+                      FontAwesomeIcons.venus,
+                      "FEMALE",
+                    ),
+                  ),
                 ),
               ],
             )),
@@ -71,6 +64,36 @@ class _InputPageState extends State<InputPage> {
             ),
           ],
         ));
+  }
+}
+
+class IconContent extends StatelessWidget {
+  IconContent(this.icon, this.label);
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          size: 60.0,
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 18.0,
+            color: Color(0XFF8D8E90),
+          ),
+        )
+      ],
+    );
   }
 }
 
